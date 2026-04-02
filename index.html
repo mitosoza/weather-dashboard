@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="controls">
+      <div class="input-section">
+        <input type="text" id="cityInput" class="city-input" placeholder="Enter city name" autocomplete="off">
+        <button id="addCityBtn" class="add-city-btn">
+          <span class="plus-icon">+</span>
+          <span>Add City</span>
+        </button>
+      </div>
+      <div class="info-section">
+        <h2>Find The Weather of Your Favorite Cities</h2>
+        <p>Enter the name of any city around the world you would like to add to your dashboard.</p>
+      </div>
+    </div>
+
+    <div class="temperature-toggle">
+      <div class="toggle-switch">
+        <input type="checkbox" id="tempToggle" class="toggle-input">
+        <label for="tempToggle" class="toggle-slider">
+          <span class="toggle-option toggle-fahrenheit">°F</span>
+          <span class="toggle-option toggle-celsius">°C</span>
+        </label>
+      </div>
+    </div>
+
+    <div id="citiesGrid" class="cities-grid">
+      <!-- City weather tiles -->
+    </div>
+  </div>
+
+  <script src="scripts/weather-api.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+
+</html>
